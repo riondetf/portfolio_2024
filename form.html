@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio de Flavien Riondet</title>
+    <link rel="stylesheet" href="styleform.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/react/16.13.1/umd/react.production.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.13.1/umd/react-dom.production.min.js'></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
+<script defer src="node_modules/swup/dist/swup.min.js"></script>
+<script defer src="anim.js"></script>
+<link rel="icon" href="tete.jpg">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <button>
+                    <a href="./index.html"><span>accueil</span></a> 
+                </button>
+            </li>
+            <li>
+                <button>
+                    <a href="./projet.html"><span>Mes projets</span></a> 
+                </button>
+            </li>
+            <li>
+                <button>
+                    <a href="#"><span>Me contacter</span></a> 
+                </button>
+            </li>
+            <li>
+                <div id="app"></div>
+                <script src='https://cdnjs.cloudflare.com/ajax/libs/react/16.13.1/umd/react.production.min.js'></script>
+                <script src='https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.13.1/umd/react-dom.production.min.js'></script>
+                <script src="./anim.js"></script>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section>Ce formulaire n'est pas fonctionnel pour toute question veuillez envoyer un mail à flavien.riondet@etu.univ-grenoble-alpes.fr</section>
+        <div class="flou"></div>
+            <h1>Me contacter</h1>
+            <div class="form-container">
+                <form class="form" method="post" action="envoi.php">
+                  <div class="form-group">
+                    <label for="email">Email :</label>
+                    <input required="" name="email" id="email" type="text">
+                  </div>
+                  <div class="form-group">
+                    <label for="textarea">Votre Message :</label>
+                    <textarea required="" cols="50" rows="10" id="textarea" name="message"></textarea>
+                  </div>
+                  <button type="submit" class="form-submit-btn">Submit</button>
+                </form>
+              </div>
+
+    </main>
+</body>
+</html>

@@ -1,0 +1,129 @@
+$color-secondary: #fff;
+
+.full-width {
+  width: 100%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  overflow: hidden;
+  margin: 0;
+
+  &.active {
+    .languette {
+      transform: translate(0, 0);
+      transition: transform 1s ease;
+    }
+
+    .content {
+      width: 100vw;
+      height: 100vh;
+      transition: width 1s 1s ease, height 1s 1s ease;
+
+      .wrapper {
+        transition: opacity 1s 2s ease;
+        opacity: 1;
+      }
+    }
+
+    .close {
+      opacity: 1;
+    }
+  }
+}
+
+.button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 800;
+  font-size: 14px;
+  color: $color-secondary;
+
+  &[class$="-ghost"] {
+    border: 2px solid $color-secondary;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      background-color: $color-secondary;
+      color: #1b1b1b;
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+
+  .wrapper {
+    align-self: center;
+    margin: 0 auto;
+    background-color: #1b1b1b;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+}
+
+#logo h1 {
+  font-size: 5vw;
+  margin: 0 0 5vh 0;
+  color: #fff;
+}
+
+h2 {
+  font-size: 5vw;
+  color: #efefef;
+  margin: 0;
+}
+
+.languette {
+  width: 100vw;
+  height: 600vw;
+  background-color: $color-secondary;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(0, 100%);
+  transition: transform 1s 0.75s ease;
+}
+
+.content {
+  position: absolute;
+  background-color: #333;
+  transition: width 0.75s ease, height 0.75s ease;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+
+  .wrapper {
+    align-self: center;
+    width: 100%;
+    opacity: 0;
+  }
+}
+
+.close {
+  position: absolute;
+  z-index: 10;
+  right: 2rem;
+  top: 2rem;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 1s 2s ease;
+}
+

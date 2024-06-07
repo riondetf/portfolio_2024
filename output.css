@@ -1,0 +1,259 @@
+.full-width {
+  width: 100%; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  overflow: hidden;
+  margin: 0; }
+  body.active .languette {
+    transform: translate(0, 0);
+    transition: transform 1s ease; }
+  body.active .content {
+    width: 100vw;
+    height: 100vh;
+    transition: width 1s 1s ease, height 1s 1s ease; }
+    body.active .content .wrapper {
+      transition: opacity 1s 2s ease;
+      opacity: 1; }
+  body.active .close {
+    opacity: 1; }
+
+.button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 800;
+  font-size: 14px;
+  color: #fff; }
+  .button[class$="-ghost"] {
+    border: 2px solid #fff;
+    transition: background-color 0.3s ease, color 0.3s ease; }
+    .button[class$="-ghost"]:hover {
+      background-color: #fff;
+      color: #1b1b1b; }
+
+.container {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  display: flex; }
+  .container .wrapper {
+    align-self: center;
+    margin: 0 auto;
+    background-color: #1b1b1b;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center; }
+
+#logo h1 {
+  font-size: 5vw;
+  margin: 0 0 5vh 0;
+  color: #fff; }
+
+h2 {
+  font-size: 5vw;
+  color: #efefef;
+  margin: 0; }
+
+.languette {
+  width: 100vw;
+  height: 600vw;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(0, 100%);
+  transition: transform 1s 0.75s ease; }
+
+.content {
+  position: absolute;
+  background-color: #333;
+  transition: width 0.75s ease, height 0.75s ease;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  text-align: center;
+  display: flex; }
+  .content .wrapper {
+    align-self: center;
+    width: 100%;
+    opacity: 0; }
+
+.close {
+  position: absolute;
+  z-index: 10;
+  right: 2rem;
+  top: 2rem;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 1s 2s ease; }
+
+header.n {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  header.n h1.n, header.n button.n {
+    position: relative;
+    z-index: 10; }
+  header.n h1.n {
+    text-transform: uppercase;
+    letter-spacing: 1pt;
+    font-size: 3em;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif; }
+  header.n button.n {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    bottom: 100px;
+    left: calc(50% - 60px);
+    width: 120px;
+    height: 50px;
+    border: 0;
+    box-shadow: 2px 1px 20px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    cursor: pointer;
+    background: #fff;
+    font-size: 1em;
+    color: #09203f;
+    transition: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955), box-shadow 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    overflow: hidden; }
+    header.n button.n:hover {
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5); }
+    header.n button.n:focus {
+      outline: 0; }
+    header.n button.n:before, header.n button.n:after {
+      font-family: "Font Awesome 5 Free";
+      transition: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+      top: 17px;
+      position: absolute; }
+    header.n button.n:before {
+      content: "\f067";
+      opacity: 1;
+      left: 53px; }
+    header.n button.n:after {
+      content: "\f0c9";
+      opacity: 0;
+      left: 0; }
+  header.n .triangle {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #09203f 0%, #537895 100%);
+    transition: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none; }
+    header.n .triangle.left {
+      clip-path: polygon(0 0, 0% 100%, 100% 100%); }
+    header.n .triangle.right {
+      clip-path: polygon(100% 0, 0 0, 100% 100%); }
+  header.n.open .triangle.left {
+    clip-path: polygon(0 0, 0 100%, 0 100%); }
+  header.n.open .triangle.right {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%); }
+  header.n.open button {
+    left: 40px;
+    bottom: 40px;
+    width: 50px;
+    border-radius: 50%; }
+    header.n.open button:before {
+      opacity: 0;
+      left: 100%; }
+    header.n.open button:after {
+      opacity: 1;
+      left: 18px; }
+    header.n.open button.menu {
+      width: 100%;
+      height: 100%;
+      bottom: 0;
+      left: 0;
+      border-radius: 0; }
+      header.n.open button.menu:after {
+        left: -100%; }
+
+content section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1em;
+  letter-spacing: 2pt;
+  color: #fff; }
+
+nav.n {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none; }
+  nav.n ul.n {
+    list-style: none; }
+    nav.n ul.n li.n {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 2;
+      letter-spacing: 1pt;
+      font-size: 2em;
+      color: #09203f;
+      animation: fadeDown .5s forwards;
+      opacity: 0;
+      cursor: pointer;
+      transform: translateY(-20px);
+      transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955); }
+      nav.n ul.n li.n:hover {
+        text-shadow: 2px 1px 40px rgba(0, 0, 0, 0.5);
+        opacity: .8; }
+      nav.n ul.n li.n:nth-child(1) {
+        animation-delay: 0.8s; }
+      nav.n ul.n li.n:nth-child(2) {
+        animation-delay: 0.9s; }
+      nav.n ul.n li.n:nth-child(3) {
+        animation-delay: 1s; }
+  nav.n #nav-close {
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    font-size: 1.5em;
+    cursor: pointer;
+    animation: fadeDown .5s forwards;
+    animation-delay: 1.1s;
+    opacity: 0;
+    color: #09203f;
+    transform: translateY(-20px); }
+
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }

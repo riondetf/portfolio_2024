@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Portfolio de Flavien Riondet</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
+    <script defer src="node_modules/swup/dist/swup.min.js"></script>
+    <script defer src="anim.js"></script>
+    <link rel="stylesheet" href="anim.css">
+    <link rel="icon" href="tete.jpg">
+    </head>
+<body>
+    <nav id="nav">
+    <div class="container">
+
+        <div class="col-6">
+            <button class="burger" onclick="toggleMenu()">☰</button>
+        </div>
+        </div>
+        <ul id="menu">
+        <li>
+            <button class="nav">
+                <a href=""><span>accueil</span></a> 
+            </button>
+        </li>
+        <li>
+            <button class="nav">
+                <a class="bouton" href="./projet.html"><span>Mes projets</span></a> 
+            </button>
+        </li>
+        <li>
+            <button class="nav">
+                <a href="./form.html"><span>Me contacter</span></a> 
+            </button>
+        </li>
+        <li>
+            <div id="app"></div>
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/react/16.13.1/umd/react.production.min.js'></script>
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.13.1/umd/react-dom.production.min.js'></script>
+            <script src="./anim.js"></script>
+        </li>
+    </ul>
+    </div>
+    </nav>
+        
+<main>
+    <div class="slider-container">
+        <div class="menu">
+          <label for="slide-dot-1"></label>
+          <label for="slide-dot-2"></label>
+          <label for="slide-dot-3"></label>
+        </div>
+        
+        <input class="slide-input" id="slide-dot-1" type="radio" name="slides" checked>
+        <img class="slide-img" src="pdg.jpg">
+  
+        <input class="slide-input" id="slide-dot-2" type="radio" name="slides">
+        <img class="slide-img" src="plage.jpg">
+        
+        <input class="slide-input" id="slide-dot-3" type="radio" name="slides">
+        <img class="slide-img" src="bastille.jpg">
+  
+      </div>
+
+      <h1 id="titre">
+        Portfolio de Flavien Riondet
+      </h1>
+
+      <button class="b">
+        <a class="bouton" href="./moi.html"><span>Qui-suis-je</span></a> 
+    </button>
+</main>        
+<body>
+
+
+</html>
